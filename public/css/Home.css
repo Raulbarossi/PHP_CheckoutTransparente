@@ -1,0 +1,121 @@
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../img/fundo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+option {
+  background-color: darkgreen;
+}
+
+.conjunto {
+  flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  .caixa:first-child {
+    margin-right: 0px !important;
+  }
+}
+.caixa {
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  border: 2px solid white;
+  transition: -webkit-backdrop-filter 3s;
+  transition: backdrop-filter 3s;
+  transition: backdrop-filter 3s, -webkit-backdrop-filter 3s;
+  border-radius: 10px;
+}
+.caixa:first-child {
+  margin-right: 20px;
+  width: 280px;
+  max-height: 400px;
+}
+.caixa:hover {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.caixa-display-info {
+  display: none;
+  max-width: 280px;
+  height: 530px;
+  transition: 1s;
+}
+
+.text-display {
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  -webkit-text-stroke: 0.2px yellow;
+}
+
+.text {
+  color: white;
+}
+
+#form-checkout {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.formStyle {
+  color: white;
+  height: 30px;
+  background: transparent;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1px 2px;
+  margin-bottom: 5px;
+  -webkit-backdrop-filter: invert(0);
+          backdrop-filter: invert(0);
+}
+.formStyle::-moz-placeholder {
+  color: white;
+}
+.formStyle:-ms-input-placeholder {
+  color: white;
+}
+.formStyle::placeholder {
+  color: white;
+}
+
+.btnForm {
+  width: 85%;
+  margin-top: 20px;
+  font-weight: 50;
+  transition: 2s;
+  -webkit-text-stroke: 0.5px;
+}
+.btnForm:hover {
+  border-radius: 20px;
+  color: #02ff6c;
+  -webkit-text-stroke: 0.5px #02ff6c;
+}
+
+.btnCard {
+  color: white;
+  background: transparent;
+  display: inline-block;
+  border: none;
+  width: 13%;
+  margin-top: 20px;
+  transition: 2s;
+}
+.btnCard:hover {
+  color: yellow;
+}/*# sourceMappingURL=Home.css.map */
