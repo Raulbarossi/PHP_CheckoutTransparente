@@ -41,6 +41,7 @@ class RequisitionsController extends AbstractController
 
   #[Route ("/process_payment", methods: ['POST'])]
   public function process_payment(Request $request){
+    
     SDK::setAccessToken("TEST-4632276973938194-063004-f08e8128101db52561ede3df065d5203-70507874");
     $payment = new Payment();
     $payment->transaction_amount = (float)$_POST['transactionAmount'];
@@ -56,9 +57,9 @@ class RequisitionsController extends AbstractController
         "number" => $_POST['identificationNumber']
     );
     $payment->payer = $payer;
-  
+
     $payment->save();
-  
+    
     $response = array(
         'status' => $payment->status,
         'status_detail' => $payment->status_detail,
